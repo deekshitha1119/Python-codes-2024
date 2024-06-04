@@ -1,0 +1,69 @@
+lab-13
+------------------------------------------------------------------------------------------------------------------------------------
+#Question-1-Write a Python program to find the number of times 4 appears in the tuple Input: tuplex = (2, 4, 5, 6, 2, 3, 4, 4, 7 ) 
+------------------------------------------------------------------------------------------------------------------------------------                                      
+tuplex = (2, 4, 5, 6, 2, 3, 4, 4, 7)                                            #given tuple
+target = 4
+count = 0
+for item in tuplex:                                                             #iterate through each item in tuple
+    if item == target:                                                          #check if item is equal to target
+        count += 1                                                              #increment the count if the item matches the target
+print("Number of times", target, "appears in the tuple is:", count)             #print statement
+
+OUTPUT:
+The number of times 4 appears in the tuple is: 3
+------------------------------------------------------------------------------------------------------------------------------------
+#Question-2-Write a Python program to convert a list to a tuple.Input: listx = [5, 10, 7, 4, 15, 3] 
+------------------------------------------------------------------------------------------------------------------------------------
+list_x = [5, 10, 7, 4, 15, 3]                                                     #given list
+tuple_x = tuple([x for x in list_x])                                              #converting list to tuple
+print("Original list:", list_x)                                                   #print original list
+print("Tuple converted to list:", tuple_x)                                        #print converted list
+
+OUTPUT:
+Original list: [5, 10, 7, 4, 15, 3]
+Tuple converted to list: (5, 10, 7, 4, 15, 3)
+---------------------------------------------------------------------------------------------------------------------------------------
+#Question-3-Write a Python program to calculate the sum of the numbers in a given tuple.Input: tuples_list = [(1, 2), (3, 4), (5, 6)]
+---------------------------------------------------------------------------------------------------------------------------------------
+tuples_list = [(1, 2), (3, 4), (5, 6)]                                             #given tuple
+sum = 0                                                                            #initializing sum variable
+for tuple_item in tuples_list:                                                     #iterate each tuple in list                                                    
+    for number in tuple_item:                                                      #iterate each number in tuple
+        sum += number                                                              #adding number to sum
+print("Sum of numbers in the given tuple list:", sum)                              #print statement
+
+OUTPUT:
+Sum of numbers in the given tuple list: 21
+----------------------------------------------------------------------------------------------------------------------------------------
+#Question-4-.Write a python program and iterate the given tuples. Input:employee1 = ("John Doe", 101, "Human Resources", 60000)
+                                                                        employee2 = ("Alice Smith", 102, "Marketing", 55000) 
+                                                                        employee3 = ("Bob Johnson", 103, "Engineering", 75000)
+----------------------------------------------------------------------------------------------------------------------------------------
+employee1 = ("John Doe", 101, "Human Resources", 60000)                            #given input
+employee2 = ("Alice Smith", 102, "Marketing", 55000)
+employee3 = ("Bob Johnson", 103, "Engineering", 75000)
+employees = [employee1, employee2, employee3]
+for employee in employees:                                                         #iterate through employee dictionary
+    print("Name:", employee[0])                                                    #print employee name
+    print("ID:", employee[1])                                                      #print employee ID
+    print("Department:", employee[2])                                              #print employee department
+    print("Salary:", employee[3])                                                  #print employee salary
+    print() 
+
+OUTPUT:
+Name: John Doe
+ID: 101
+Department: Human Resources
+Salary: 60000
+
+Name: Alice Smith
+ID: 102
+Department: Marketing
+Salary: 55000
+
+Name: Bob Johnson
+ID: 103
+Department: Engineering
+Salary: 75000
+-----------------------------------------------------------------------------------------------------------------------------------------

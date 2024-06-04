@@ -1,0 +1,83 @@
+lab-10
+--------------------------------------------------------------------------------------------------------------
+#Question-1-Write a Python program to handle a ZeroDivisionError exception when dividing a number by zero.
+--------------------------------------------------------------------------------------------------------------
+
+try:                                                                                    #try block
+    n1 = int(input("Enter the number n1: "))                                            #user input
+    n2 = int(input("Enter the number n2: "))                                            #user input
+    result = n1 / n2                                                                    
+    print("Result:", result)                                                            #print statement
+except ZeroDivisionError:                                                               #catching the specific error of division by zero
+    print("Error: Division by zero is not allowed.")
+
+OUTPUT-1:
+Enter the number n1: 35
+Enter the number n2: 0
+ERROR!
+Error: Division by zero is not allowed.
+
+OUTPUT-2:
+Enter the number n1: 35
+Enter the number n2: 5
+Result: 7.0
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+#Question-2-Write a Python program that prompts the user to input an integer and raises a ValueError exception if the input is not a valid integer. 
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+try:                                                                                   #try block
+    user_input = input("Please enter an integer: ")                                    #user input          
+    integer_value = int(user_input)
+    print("You entered:", integer_value)                                               #print statement
+except ValueError:                                                                     #catching valueerror
+    print("Error: Please enter a valid integer.")                                      #print statement
+
+OUTPUT-1:
+Please enter an integer: 2.3
+ERROR!
+Error: Please enter a valid integer.
+
+OUTPUT-2:
+Please enter an integer: 20
+You entered: 20
+------------------------------------------------------------------------------------------------------------------------------------------------
+#Question-3-Write a Python program that opens a file and handles a FileNotFoundError exception if the file does not exist. 
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+try:                                                                                         #try block
+    filename = input("Enter the file name: ")                                                #user input
+    with open(filename, 'r') as file:                                                        #opening file
+        print("File exists")                                                                 #print statement      
+except FileNotFoundError:                                                                    #valuenotfounderror
+    print("Error: The file '{}' does not exist.".format(filename))                           #print statement
+
+OUTPUT:
+Enter the file name: xyz.py
+ERROR!
+Error: The file 'xyz.py' does not exist.
+------------------------------------------------------------------------------------------------------------------------------------------------
+#Question-4-Write a Python program that prompts the user to input two numbers and raises a TypeError exception if the inputs are not numerical
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+while True:                                                                                 #while condition
+    try:                                                                                    #try block
+        num1 = float(input("Enter the number 1: "))                                         #user input
+        num2 = float(input("Enter the number 2: "))                                         #user input
+        print("You entered:", num1, "and", num2)                                            #print input
+        break                                                                               #break statement
+    except ValueError:                                                                      #expected error
+        print("Error: enter numerical values.")                                             #print statement
+
+OUTPUT:
+Enter the number 1: 45
+Enter the number 2: abcd
+ERROR!
+Error: enter numerical values.
+
+
+Enter the number 1: 25
+Enter the number 2: 5
+You entered: 25.0 and 5.0
+------------------------------------------------------------------------------------------------------------------------------------------------
+

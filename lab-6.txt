@@ -1,0 +1,96 @@
+lab-6
+--------------------------------------------------------------------------------------------------------------
+#Question-1-Print the first 10 natural numbers using for loop.
+--------------------------------------------------------------------------------------------------------------
+
+for i in range(1, 11):                                               #for loop
+    print(i);                                                        #print statement
+
+OUTPUT:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+--------------------------------------------------------------------------------------------------------------
+#Question-2-Python program to check if the given string is a palindrome.
+--------------------------------------------------------------------------------------------------------------
+
+my_str = 'madam'                                                        #user input                                                  
+my_str = my_str.casefold()
+rev_str = reversed(my_str)                                              #condition
+if list(my_str) == list(rev_str):                                       #conditional statement
+ print("The string is a palindrome.")                                   #print statement
+else:
+ print("The string is not a palindrome.")                               #print statement
+
+OUTPUT:
+The string is a palindrome.
+
+--------------------------------------------------------------------------------------------------------------
+#Question-3-Python program to check if a given number is an Armstrong number
+--------------------------------------------------------------------------------------------------------------
+
+num = int(input("Enter a number: "))                                              #user input
+num_str = str(num)                                                                #condition
+num_digits = len(num_str)
+sum_of_powers = sum(int(digit) ** num_digits for digit in num_str)                #condition
+if sum_of_powers == num:                                                          #conditional statement
+    print(num, "is an Armstrong number.")                                         #print statement
+else:
+    print(num, "is not an Armstrong number.")                                     #print statement
+
+OUTPUT:
+Enter a number: 5
+5 is an Armstrong number.
+
+--------------------------------------------------------------------------------------------------------------
+#Question-4-Python program to get the Fibonacci series between 0 to 50.
+--------------------------------------------------------------------------------------------------------------
+
+a, b = 0,1                                                                      #initializing series sequence
+for i in range(51):                                                             #for loop
+    if a <= 50:                                                                 #conditional statement
+        print(a, end=" ")
+        a, b = b, a + b
+    else:
+        break                                                                   #break statement
+
+OUTPUT:
+0 1 1 2 3 5 8 13 21 34 
+
+--------------------------------------------------------------------------------------------------------------
+#Question-5-Python program to check the validity of password input by users.
+--------------------------------------------------------------------------------------------------------------
+
+password = input("Enter your password: ")                                              #user input
+validity = (                                                                           #condition
+    len(password) >= 8
+    and any(char.isupper() for char in password)
+    and any(char.islower() for char in password)
+    and any(char.isdigit() for char in password)
+    and any(char in "!@#$%^&*()-+" for char in password)
+)
+print("Valid password." if validity else "Invalid password.")                          #print statement
+
+OUTPUT:
+Enter your password: @Python2024
+Valid password.
+--------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+

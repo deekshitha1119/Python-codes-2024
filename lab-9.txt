@@ -1,0 +1,98 @@
+lab-9
+-------------------------------------------------------------------------------------------------------------------------------------
+#Question-1-Write a function in python to read the content from a text file "ABC.txt" line by line and display the same on screen. 
+-------------------------------------------------------------------------------------------------------------------------------------
+
+def read_and_display(file_name):                                                       #creating a function using def                    
+    try:                                                                               #starting of try block
+        with open(file_name, 'r') as file:
+            for line in file:
+                print(line, end='')
+    except FileNotFoundError:                                                          #Expect error
+        print(f"File '{file_name}' not found.")
+    except Exception as e:
+        print(f"An error occurred: {e}")                                               #print statement
+file_name = "ABC.txt"                                                                  #file name
+read_and_display(file_name)
+
+OUTPUT:
+read_file() function helps to read the content in file
+_____________________________________________________________
+|ABC.txt file contents|
+read_file() function helps to read the content in file
+_____________________________________________________________
+
+-----------------------------------------------------------------------------------------------------------------------------------
+#Question-2-Write a function in Python to count and display the total number of words in a text file “ABC.txt” 
+-----------------------------------------------------------------------------------------------------------------------------------
+
+def count_words_in_file(filename):                                                    #creating a function using def
+    try:                                                                              #start of try block
+        with open(filename, 'r') as file:                                              
+            text = file.read()
+            word_count = len(text.split())                                            #count the words
+            print("Total number of words in the file:", word_count)                   #print statement
+    except FileNotFoundError:                                                         #expect error
+        print("File not found.")
+count_words_in_file("ABC.txt")
+
+OUTPUT:
+Total number of words in the file: 9
+_____________________________________________________________
+|ABC.txt file contents|
+read_file() function helps to read the content in file
+_____________________________________________________________
+
+----------------------------------------------------------------------------------------------------------------------------------
+#Question-3-Write a function in Python to count uppercase character in a text file “ABC.txt” 
+-----------------------------------------------------------------------------------------------------------------------------------
+
+def count_uppercase(file_name):                                                            #creating a function using def
+    try:                                                                                   #start of try block
+        with open(file_name, 'r') as file:                                                 
+            text = file.read()                                                             #read file
+            uppercase_count = sum(1 for char in text if char.isupper())                    #count uppercase
+            return uppercase_count
+    except FileNotFoundError:                                                              #expect error
+        print(f"File '{file_name}' not found.")
+        return -1
+    except Exception as e:
+        print(f"An error occurred: {e}")                                                  #print statement
+        return -1
+file_name = "ABC.txt"                                                                     #file name
+uppercase_count = count_uppercase(file_name)
+if uppercase_count != -1:
+    print(f"Number of uppercase characters in '{file_name}': {uppercase_count}")          #print statement
+ 
+OUTPUT:
+Number of uppercase characters in 'ABC.txt': 34
+____________________________________________________________
+|ABC.txt file contents|
+char.isupper():USED TO CHECK IF A CHARACTER IS UPPERCASE 
+____________________________________________________________
+
+--------------------------------------------------------------------------------------------------------------------------------
+#Question-4-Write a function display_words() in python to read lines from a text file "story.txt", 
+and display those words, which are less than 4 characters.
+---------------------------------------------------------------------------------------------------------------------------------
+ 
+def display_words(filename):                                               #creating a function using def
+    try:                                                                   #start of try block
+        with open(filename, 'r') as file:                                  #open file
+            for line in file:
+                words = line.split()                                       #split words in file
+                for word in words:
+                    if len(word) < 4:                                      #condition less than 4
+                        print(word)
+    except FileNotFoundError:                                              #expect error
+        print("File not found.")
+display_words("story.txt")                                                 #display words less than 4 char
+
+OUTPUT:
+is
+an
+_______________________________________________________
+|story.txt file contents|
+python is an interpreted language
+_______________________________________________________
+------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,93 @@
+lab-8
+---------------------------------------------------------------------------------------------------------------
+#Question-1-Write a Python program to Count all letters, digits, and special symbols from the given 
+string Input = “P@#yn26at^&i5ve”
+---------------------------------------------------------------------------------------------------------------
+
+input_string = "P@#yn26at^&i5ve"                                            #input string
+chars = 0                                                                   #initializing counters
+digits = 0
+symbols = 0
+for char in input_string:                                                   #forloop
+    if char.isalpha():                                                      #conditional statements
+        chars += 1
+    elif char.isdigit():
+        digits += 1
+    else:
+        symbols += 1
+print("Chars =", chars)                                                     #print statement
+print("Digits =", digits)                                                   #print statement
+print("Symbols =", symbols)                                                 #print statement
+
+OUTPUT:
+Chars = 8
+Digits = 3
+Symbols = 4
+
+--------------------------------------------------------------------------------------------------------------------------
+#Question-2- Write a Python program to remove duplicate characters of a given string. 
+Input = “String and String Function”
+--------------------------------------------------------------------------------------------------------------------------
+
+input_string = "String and String Function"                                              #input string
+words = input_string.split()                                                             #Split the input string 
+seen = set()                                                                             #initializing set
+result = []                                                                              #initializing list
+for word in words:                                                                       #forloop
+    if word not in seen:
+        result.append(word)
+        seen.add(word)
+output_string = ' '.join(result)                                                         #join words
+print("Original string:", input_string)                                                  #print statement
+print("String after removing duplicate words:", output_string)                           #print statement
+
+OUTPUT:
+Original string: String and String Function
+String after removing duplicate words: String and Function
+
+------------------------------------------------------------------------------------------------------------------------------
+#Question-3-Write a Python program to count Uppercase, Lowercase, special character and numeric values in a given string
+Input = “Hell0 W0rld ! 123 * # welcome to pYtHoN”
+------------------------------------------------------------------------------------------------------------------------------
+
+input_string = "Hell0 W0rld ! 123 * # welcome to pYtHoN"                                #input string
+uppercase_count = 0                                                                     #initializing counters
+lowercase_count = 0
+digit_count = 0
+special_count = 0
+for char in input_string:                                                               #forloop
+    if char.isupper():                                                                  #conditional statements
+        uppercase_count += 1
+    elif char.islower():
+        lowercase_count += 1
+    elif char.isdigit():
+        digit_count += 1
+    else:
+        special_count += 1
+print("Uppercase:", uppercase_count)                                                    #print statement
+print("Lowercase:", lowercase_count)                                                    #print statement
+print("Digits:", digit_count)                                                           #print statement
+print("Special characters:", special_count)                                             #print statement
+
+OUTPUT:
+Uppercase: 5
+Lowercase: 18
+Digits: 5
+Special characters: 11
+
+-----------------------------------------------------------------------------------------------------------------------------------
+#Question-4- Write a Python Count vowels in a string.input= “Welcome to Python Assignment” 
+-----------------------------------------------------------------------------------------------------------------------------------
+
+input_string = "Welcome to Python Assignment"                                                #input string
+vowel_count = 0                                                                              #initializing counter for vowel
+vowels = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'}                                  #defining a set of vowels
+for char in input_string:                                                                    #forloop
+    if char in vowels:
+        vowel_count += 1
+print(" Total No of vowels in the string:", vowel_count)                                     #print statement                                 
+
+OUTPUT:
+Total No of vowels in the string:8
+------------------------------------------------------------------------------------------------------------------------------------
+ 

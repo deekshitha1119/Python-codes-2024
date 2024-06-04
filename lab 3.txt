@@ -1,0 +1,117 @@
+LAB-3
+--------------------------------------------------------------------------------------------------------------
+#Question-1-Python program to check leap year 
+--------------------------------------------------------------------------------------------------------------
+
+year = int(input("Enter a year: "))                                             #user input
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):                    #condition
+  print(year, "is a leap year." )                                               #print statement
+else:
+  print(year, "is not a leap year.")                                            #print statement
+
+
+OUTPUT:
+Enter a year: 2003
+2003 is not a leap year.
+
+--------------------------------------------------------------------------------------------------------------
+#Question-2-Python Program to Find the Largest Among Three Numbers 
+--------------------------------------------------------------------------------------------------------------
+
+num1 = 5                                                               #user input
+num2 = 25                                                              #user input
+num3 = 15                                                              #user input
+if (num1 >= num2) and (num1 >= num3):                                  #conditional statement
+ largest = num1
+elif (num2 >= num1) and (num2 >= num3):                                #conditional statement
+ largest = num2
+else:                                                                  #conditional statement
+ largest = num3
+print("The largest number is", largest)                                #print statement                                
+
+
+OUTPUT:
+The largest number is 25
+
+--------------------------------------------------------------------------------------------------------------
+#Question-3-Python Program to Check if a Number is Positive, Negative or 0 
+--------------------------------------------------------------------------------------------------------------
+
+number = float(input("Enter a number: "))                              #print statement
+if number > 0:                                                         #conditional statement
+    print("The number is positive.")                                   #print statement
+elif number < 0:                                                       #conditional statement
+    print("The number is negative.")                                   #print statement
+else:                                                                  #conditional statement
+    print("The number is zero.")                                       #print statement
+
+
+OUTPUT:
+Enter a number: 100
+The number is positive.
+
+--------------------------------------------------------------------------------------------------------------
+#Question-4-A toy vendor supplies three types of toys: Battery Based Toys, Key-based Toys, and Electrical Charging Based Toys. The vendor gives a discount of 10% on orders for battery-based toys if the order is for more than Rs. 1000. On orders of more than Rs. 100 for key-based toys, a discount of 5% is given, and a discount of 10% is given on orders for electrical charging based toys of value more than Rs. 500. Assume that the numeric codes 1,2 and 3 are used for battery based toys, key-based toys, and electrical charging based toys respectively. Write a program that reads the product code and the order amount and prints out the net amount that the customer is required to pay after the discount. 
+--------------------------------------------------------------------------------------------------------------
+
+print("1. For Battery based Toys")                                          #print statement
+print("2. For Key based Toys")                                              #print statement
+print("3. Electric charging based Toys")                                    #print statement
+opt = int(input("Enter the product code (1, 2, or 3)?: "))                  #print statement
+amt = int(input("Enter the amount: "))                                      #user input
+if opt == 1:                                                                #user input
+    if amt > 1000:
+        dis = amt * 0.1                                                     #conditional statement
+    else:
+        dis = 0
+elif opt == 2:
+    if amt > 100:
+        dis = amt * 0.05                                                    #conditional statement
+    else:
+        dis = 0
+elif opt == 3:
+    if amt > 500:
+        dis = amt * 0.1                                                     #conditional statement
+    else:
+        dis = 0
+else:
+    print("Product is not available")                                       #print statement
+bill_amt = amt - dis                                                        #condition after applying discount
+print("Customer has to pay:", bill_amt)                                     #print statement
+
+
+OUTPUT:
+
+1. For Battery based Toys
+2. For Key based Toys
+3. Electric charging based Toys
+Enter the product code (1, 2, or 3)?: 1
+Enter the amount: 1250
+Customer has to pay: 1125.0
+
+--------------------------------------------------------------------------------------------------------------
+#Question-5-A transport company charges the fare according to following table: Distance Charges 1-50 8 Rs./Km 51-100 10 Rs./Km > 100 12 Rs/Km
+--------------------------------------------------------------------------------------------------------------
+
+distance = int(input("Enter distance: "))                              #user input 
+if distance >= 1 and distance <= 50:                                   #conditional statement
+    fare = distance * 8                                               
+elif distance >= 51 and distance <= 100:                               #conditional statement
+    fare = distance * 10
+elif distance > 100:                                                   #conditional statement
+    fare = distance * 12
+else:
+    print("Invalid fare")                                              #print statement
+print("The total fare is:", fare)                                      #print statement
+
+
+OUTPUT:
+
+Enter distance: 120
+The total fare is: 1440
+--------------------------------------------------------------------------------------------------------------
+
+
+
+
+

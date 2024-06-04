@@ -1,0 +1,75 @@
+lab-7
+-------------------------------------------------------------------------------------------------------------------------------------------
+#Question-1-# 1. Write a Python program to count the occurrences of each word in a given sentence.
+string = “To change the overall look of your document. To change the look available in the gallery”
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+string = "To change the overall look of your document.To change the look available in the gallery"            #input string
+words = string.split()                                                                                        #condition to split string
+word_counts = {}
+for word in words:                                                                                            #forloop
+    word = word.strip(".,!?")
+    word = word.lower()
+    word_counts[word] = word_counts.get(word, 0) + 1
+for word, count in word_counts.items():                                                                       
+    print(f"{word}: {count}")                                                                                 #print statement
+
+OUTPUT:
+to: 2
+change: 2
+the: 3
+overall: 1
+look: 2
+of: 1
+your: 1
+document: 1
+available: 1
+in: 1
+gallery: 1
+
+----------------------------------------------------------------------------------------------------------------------------------
+#Question-2-Write a Python program to remove a newline in Python.String = "\nBest \nDeeptech \nPython \nTraining\n"
+----------------------------------------------------------------------------------------------------------------------------------
+
+string = "\nBest \nDeeptech \nPython \nTraining\n"                                    #input string
+string_without_newlines = string.replace("\n", "")                                    #condition to remove newline using replace
+print(string_without_newlines)                                                        #print statement
+
+OUTPUT:
+
+Best Deeptech Python Training
+
+--------------------------------------------------------------------------------------------------------------------------
+#Question-3-Write a Python program to reverse words in a string.String = “Deeptech Python Training”
+--------------------------------------------------------------------------------------------------------------------------
+
+string = "Deeptech Python Training"                                                  #input string
+words = string.split()                                                               #split string
+reversed_words = words[::-1]                                                         #condition
+reversed_string = " ".join(reversed_words)
+print(reversed_string)                                                               #print statement
+
+OUTPUT:
+Training Python Deeptech
+
+----------------------------------------------------------------------------------------------------------------------------------
+#Question-4-Write a Python program to count and display the vowels of a given text. String="Welcome to python Training".
+----------------------------------------------------------------------------------------------------------------------------------
+
+string = "Welcome to Python Training"                                                 #input string
+vowels = "aeiouAEIOU"                                                                 #vowels
+vowel_counts = {}                                                                     #dictionary to store counts of each vowel
+for char in string:                                                                   #forloop
+    if char in vowels:
+        char_lower = char.lower()                                                     # converting character to lowercase
+        vowel_counts[char_lower] = vowel_counts.get(char_lower, 0) + 1
+for vowel, count in vowel_counts.items():
+    print(f"{vowel}: {count}")                                                        #print statement
+
+OUTPUT:
+e: 2
+o: 3
+a: 1
+i: 2
+-----------------------------------------------------------------------------------------------------------------------------------
+

@@ -1,0 +1,72 @@
+lab-4
+
+---------------------------------------------------------------------------------------------------------------------------------
+#Question-1-Declare a div() function with two parameters. Then call the function and pass two numbers and display their division.
+---------------------------------------------------------------------------------------------------------------------------------
+
+def div(num1, num2):                                                         #declaring function
+    if num2 != 0:                                                            #conditional statement
+        return num1 / num2
+    else:
+        return "Error: Division by zero is not allowed"
+num1 = float(input("Enter the first number: "))                              #user input
+num2 = float(input("Enter the second number: "))                             #user input
+result = div(num1, num2)
+print("Result:", result)                                                     #print statement
+
+
+OUTPUT:
+Enter the first number: 45
+Enter the second number: 5
+Result: 9.0
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+#Question-2-Declare a square() function with one parameter. Then call the function and pass one number and display the square of that number.
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+def square(num):                                                          #declaring function
+  return num ** 2                                                         #condition
+number = float(input("Enter a number: "))                                 #user input
+result = square(number)
+print("Square of", number, "is:", result)                                 #print statement
+
+OUTPUT:
+Enter a number: 10
+Square of 10.0 is: 100.0
+
+--------------------------------------------------------------------------------------------------------------
+#Question-3-Using max() and min() functions display the maximum and minimum of 5 random numbers.
+--------------------------------------------------------------------------------------------------------------
+
+numbers = []                                                                #user input
+for i in range(5):                                                          #condition
+    num = float(input("Enter number {}: ".format(i + 1)))                 
+    numbers.append(num)
+print("Entered numbers are:", numbers)
+maximum = max(numbers)                                                      #declaring max() function
+minimum = min(numbers)                                                      #declaring min()function
+print("Maximum number:", maximum)                                           #print statement
+print("Minimum number:", minimum)                                           #print statement
+
+OUTPUT:
+Enter number 1: 100
+Enter number 2: 90
+Enter number 3: 125
+Enter number 4: 625
+Enter number 5: 60
+Entered numbers are: [100.0, 90.0, 125.0, 625.0, 60.0]
+Maximum number: 625.0
+Minimum number: 60.0
+
+--------------------------------------------------------------------------------------------------------------
+#Question-4-Accept a name from the user and display that in lower case using lower() function
+--------------------------------------------------------------------------------------------------------------
+
+name = input("Enter your name: ")                                           #user input
+lowercase_name = name.lower()                                               #condition
+print("Name in lowercase:", lowercase_name)                                 #print statement
+
+OUTPUT:
+Enter your name: HELLO PYTHON
+Name in lowercase: hello python
+--------------------------------------------------------------------------------------------------------------

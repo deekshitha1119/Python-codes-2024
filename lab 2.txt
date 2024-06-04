@@ -1,0 +1,59 @@
+Day-3 lab
+--------------------------------------------------------------------------------------------------------------
+#Question 1- using input() function take one number from the user  and using ternary operators check whether the number is even or odd
+--------------------------------------------------------------------------------------------------------------
+number=int(input("Enter a number:"))                        #Taking input from user
+result="Even" if number%2==0 else "Odd"                     #condition to check if the number is even or odd
+print("The number is:",result)                              #Print statement
+
+OUTPUT:
+Enter a number:48
+The number is: Even
+
+--------------------------------------------------------------------------------------------------------------
+#Question 2- Using input function take two number and then swap the number
+--------------------------------------------------------------------------------------------------------------
+x=5                                                                #Taking input value for X
+y=10                                                               #taking input value for Y
+temp=x                                                             #creating a temporary variable to swap
+x=y
+y=temp
+print("the value of x after swapping:{}".format(x))                #print statement
+print("the value of y after swapping:{}".format(y))                #print statement
+
+OUTPUT:
+the value of x after swapping:10
+the value of y after swapping:5
+
+--------------------------------------------------------------------------------------------------------------
+#Question 3- Write a Program to Convert Kilometers to Miles
+--------------------------------------------------------------------------------------------------------------
+kilometers=float(input("Enter distance in kilometers:"))           #taking input from user for distance
+conversion_factor=0.621371                                         #conversion factor from kilometers to miles
+miles=kilometers*conversion_factor                                 #condition
+print(f"{kilometers} kilometers is equal to {miles} miles.")       #print statement
+
+OUTPUT:
+Enter distance in kilometers:10
+10.0 kilometers is equal to 6.21371 miles.
+
+--------------------------------------------------------------------------------------------------------------
+#Question 4-Find the Simple Interest on Rs. 200 for 5 years at 5% per year.
+--------------------------------------------------------------------------------------------------------------
+principal=200                                                    #Taking given values
+rate=5                                                           #value in % (5%)
+time=5                                                           #Time in years(5years)
+simple_interest=(principal*rate*time)/100                        #condition for simple interest
+print("Simple Interest:",simple_interest)                        #print statement
+
+OUTPUT:
+Simple Interest: 50.0
+--------------------------------------------------------------------------------------------------------------        
+
+
+
+
+
+
+
+

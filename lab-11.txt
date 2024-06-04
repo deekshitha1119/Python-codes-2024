@@ -1,0 +1,90 @@
+lab-11
+---------------------------------------------------------------------------------------------------------------
+#Question-1-Write a Python program to sum all the items in a list. 
+---------------------------------------------------------------------------------------------------------------
+list=[5,10,15,20,25]                                                 #input list
+total=sum(list)                                                      #condition
+print("The sum of all items in the list is:",total)                  #print statement
+
+OUTPUT:
+The sum of all items in the list is: 75
+
+---------------------------------------------------------------------------------------------------------------------
+#Question-2-Write a Python program to get the largest and smallest number from a list without builtin functions.
+---------------------------------------------------------------------------------------------------------------------
+
+numbers = [90,34,56,77,89,24]                                    #input list
+largest = numbers[0]                                             #initializing variable to store largest number
+smallest = numbers[0]                                            #initializing variable to store smallest number
+for num in numbers:                                              
+    if num > largest:                                            #checks the number largest
+        largest = num
+    elif num < smallest:                                         #checks the number smallest
+        smallest = num
+print("Largest number:", largest)                                #print statement
+print("Smallest number:", smallest)                              #print statement
+
+OUTPUT:
+Largest number: 90
+Smallest number: 24
+-----------------------------------------------------------------------------------------------------------------------------
+#Question_3- Write a Python program to find duplicate values from a list and display those. 
+-----------------------------------------------------------------------------------------------------------------------------
+
+my_list = [10,53,33,40,53,29,33,60,71,85,8,10]                                     #input list
+duplicates = list(set([x for x in my_list if my_list.count(x) > 1]))               #condition ton duplicate
+if duplicates:
+    print("Duplicate values in list:", duplicates)                                 #print statement 
+else:
+    print("No duplicate values found inlist.")                                     #print statement
+
+OUTPUT:
+Duplicate values in list: [33, 10, 53]
+
+-----------------------------------------------------------------------------------------------------------------------------------
+#Question-4-Write a Python program to split a given list into two parts where the length of the first part of the list is given. 
+Original list: [1, 1, 2, 3, 4, 4, 5, 1] 
+Length of the first part of the list: 3 
+Splitted the said list into two parts: 
+([1, 1, 2], [3, 4, 4, 5, 1]) 
+------------------------------------------------------------------------------------------------------------------------------------
+
+original_list = [1, 1, 2, 3, 4, 4, 5, 1]                                           #given list
+length_first_part = 3                                                              #given condition
+first_part = original_list[:length_first_part]                                     #slicing first part
+second_part = original_list[length_first_part:]                                    #slicing second part
+print("Splitted the list into two parts:",(first_part,second_part))                #print statement
+
+OUTPUT:
+Splitted the list into two parts: ([1, 1, 2], [3, 4, 4, 5, 1])
+
+--------------------------------------------------------------------------------------------------------------------------------------
+#Question-5-Write a Python program to traverse a given list in reverse order, and print the elements with the original index. 
+Original list: ['red','green','white','black'] Traverse the said list in reverse order:black,white,green,red.
+--------------------------------------------------------------------------------------------------------------------------------------
+
+original_list = ['red', 'green', 'white', 'black']                                 #given list
+print("list in reverse order:")                                                    #print statement
+for index in range(len(original_list) - 1, -1, -1):                                #condition to traverse in reverse order
+    print(original_list[index])                                                    #print statement
+
+OUTPUT:
+list in reverse order:
+black
+white
+green
+red
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
