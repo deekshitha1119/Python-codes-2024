@@ -1,0 +1,50 @@
+lab-22
+---------------------------------------------------------------------------------------------------------------
+#Question-1-Suppose you are a teacher, and you want to analyze the exam scores of your students 
+in a particular subject. You have recorded the scores of your students for a recent exam, and 
+you want to represent this data using a Pandas Series.
+Input:students = ['Alice','Bob','Charlie','David','Eve','Frank','Grace','Hannah','Ivy','Jack'] 
+exam_scores = [92, 88, 76, 94, 82, 90, 85, 89, 78, 91]
+---------------------------------------------------------------------------------------------------------------
+import pandas as pd                                                         #importing pandas library
+students = ['Alice','Bob','Charlie','David','Eve','Frank',
+'Grace','Hannah','Ivy','Jack']                                              #list of students
+exam_scores = [92, 88, 76, 94, 82, 90, 85, 89, 78, 91]                      #list of exam scores
+df=pd.DataFrame({'Names':students,'Marks':exam_scores})                     #creating a dataframe
+print(df)                                                                   #print statement
+
+OUTPUT:
+     Names  Marks
+0    Alice     92
+1      Bob     88
+2  Charlie     76
+3    David     94
+4      Eve     82
+5    Frank     90
+6    Grace     85
+7   Hannah     89
+8      Ivy     78
+9     Jack     91
+
+---------------------------------------------------------------------------------------------------------------
+#Question-2-Suppose you want to track and analyze your household expenses for a month. 
+You have recorded the expenses for various categories, such as groceries, utilities,
+rent, transportation, and entertainment. You can represent this expense data using a Pandas Series.
+Input: categories = ['Groceries','Utilities','Rent','Transportation','Entertainment']
+ expenses = [500, 200, 1200, 300, 150]
+---------------------------------------------------------------------------------------------------------------
+import pandas as pd                                                                  #importing pandas library
+categories=['Groceries','Utilities','Rent','Transportation','Entertainment']         #list of categories
+expenses=[500, 200, 1200, 300, 150]                                                  #list of expenses
+df=pd.DataFrame({'Categories':categories,'Expenses':expenses})                       #creating dataframe
+print(df)                                                                            #print statement
+
+OUTPUT:
+        Categories  Expenses
+0       Groceries       500
+1       Utilities       200
+2            Rent      1200
+3  Transportation       300
+4   Entertainment       150
+
+--------------------------------------------------------------------------------------------------------------

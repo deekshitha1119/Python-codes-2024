@@ -1,0 +1,56 @@
+lab-23
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Question-1-Write a Pandas program to create a dataframe from a dictionary and display it.
+Sample data:score={'Math':[78,85,96,80,86], 'English': [84,94,89,83,86], 'Hindi': [86,97,96,72,83]}
+--------------------------------------------------------------------------------------------------------------------------------------------------
+import pandas as pd                                                      #importing pandas library
+score = {                                                                #dictionary of scores
+    'Math': [78, 85, 96, 80, 86],
+    'English': [84, 94, 89, 83, 86],
+    'Hindi': [86, 97, 96, 72, 83]
+}
+df = pd.DataFrame(score)                                                 #creating dataframe from dictionary
+print(df)                                                                #display dataframe
+
+OUTPUT:
+
+    Math  English  Hindi
+0    78       84     86
+1    85       94     97
+2    96       89     96
+3    80       83     72
+4    86       86     83
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Question-2-Write a Pandas program to create and display a DataFrame from a specified dictionary data which has the index labels.
+Sample Python dictionary data and list labels:
+exam_data = {'name': ['Artastasia', 'Dima', 'Katherine', 'James', 'Emily',
+'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas'],
+'score': [12.5, 9, 16.5, np.nan, 9, 20, 14.5, np.nan, 8, 19].
+'attempts': [1, 3, 2, 3, 2, 3, 1, 1, 2, 1].
+'qualify': ['yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes']}
+--------------------------------------------------------------------------------------------------------------------------------------------------
+import pandas as pd                                                             #importing pandas library
+import numpy as np                                                              #importing numpy library
+exam_data = {                                                                   #dictionary containing Exam data
+    'name': ['Artastasia', 'Dima','Katherine','James','Emily',
+             'Michael','Matthew','Laura','Kevin','Jonas'],
+    'score': [12.5,9,16.5,np.nan,9,20,14.5,np.nan,8,19],
+    'attempts': [1,3,2,3,2,3,1,1,2,1],
+    'qualify': ['yes','no','yes','no','no','yes','yes','no','no','yes']
+}
+labels = ['A','B','C','D','E','F','G','H','I','J']                              #Adding index values for dataframe
+df = pd.DataFrame(exam_data, index=labels)                                      #creating dataframe from dictionary
+print(df)                                                                       #display dataframe
+
+OUTPUT:
+         name   score   attempts  qualify
+A  Artastasia   12.5         1     yes
+B        Dima    9.0         3      no
+C   Katherine   16.5         2     yes
+D       James    NaN         3      no
+E       Emily    9.0         2      no
+F     Michael   20.0         3     yes
+G     Matthew   14.5         1     yes
+H       Laura    NaN         1      no
+I       Kevin    8.0         2      no
+J       Jonas   19.0         1     yes
